@@ -134,6 +134,14 @@ footer {
   border: 2px solid #2c2f6c;
   color: #2c2f6c;
 }
+.testimony {
+  background: #fff;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 700px;
+  border-left: 5px solid #d4af37;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
 .cta:hover {
   transform: translateY(-2px);
