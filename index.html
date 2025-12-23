@@ -54,5 +54,11 @@
 <div id="lightbox" onclick="this.style.display='none'">
   <img id="lightbox-img">
 </div>
+<script>
+  function openLightbox(src) {
+    document.getElementById('lightbox').style.display = 'flex';
+    document.getElementById('lightbox-img').src = src;
+  }
+</script>
 </body>
 </html>
