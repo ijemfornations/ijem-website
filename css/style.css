@@ -91,3 +91,20 @@ footer {
   max-height: 90%;
   border-radius: 8px;
 }
+.floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating a {
+  background: #2c2f6c;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+}
