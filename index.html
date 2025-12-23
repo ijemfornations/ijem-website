@@ -30,6 +30,11 @@
     IJEM – In Jesus Ever Ministries is committed to prayer, discipleship,
     evangelism, and raising a Christ-centered generation rooted in God’s Word.
   </p>
+<button onclick="toggleLang()">हिंदी / English</button>
+
+<p class="lang en">Raising a New Fruitful Generation</p>
+<p class="lang hi" style="display:none;">एक नई फलदायी पीढ़ी का निर्माण</p>
+
 </section>
 <section class="fade">
   <h2>Raising a New Fruitful Generation</h2>
@@ -58,6 +63,14 @@
   function openLightbox(src) {
     document.getElementById('lightbox').style.display = 'flex';
     document.getElementById('lightbox-img').src = src;
+  }
+</script>
+<script>
+  function toggleLang() {
+    document.querySelectorAll('.en').forEach(e => e.style.display =
+      e.style.display === 'none' ? 'block' : 'none');
+    document.querySelectorAll('.hi').forEach(e => e.style.display =
+      e.style.display === 'none' ? 'block' : 'none');
   }
 </script>
 </body>
