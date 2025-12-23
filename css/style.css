@@ -146,4 +146,17 @@ footer {
 .cta:hover {
   transform: translateY(-2px);
 }
+.schedule {
+  list-style: none;
+  padding: 0;
+}
+
+.schedule li {
+  background: #fff;
+  margin: 10px auto;
+  padding: 15px;
+  max-width: 600px;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
 
