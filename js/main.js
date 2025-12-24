@@ -40,13 +40,14 @@ function toggleMenu() {
 }
 
 /* ===============================
-   GLOBAL LIGHTBOX (NEW ✅)
+   GLOBAL LIGHTBOX
 ================================ */
 document.addEventListener('click', e => {
   if (e.target.tagName === 'IMG' && e.target.closest('.gallery')) {
     openLightbox(e.target.src);
   }
 });
+
 // Close lightbox on ESC key
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
@@ -118,3 +119,13 @@ fetch('data/schedule.json')
     });
   })
   .catch(err => console.error('Schedule load error:', err));
+
+/* ===============================
+   FILTER SCHEDULE ✅ (NEW)
+================================ */
+function filterSchedule(type) {
+  document.querySelectorAll('.event').forEach(e => {
+    e.style.display =
+      type === 'all' || e.dataset.type === type ? 'block' : 'none';
+  });
+}
