@@ -30,7 +30,7 @@ function toggleLang() {
 }
 
 /* ===============================
-   MOBILE MENU TOGGLE ✅ (NEW)
+   MOBILE MENU TOGGLE
 ================================ */
 function toggleMenu() {
   const nav = document.getElementById('main-nav');
@@ -38,6 +38,15 @@ function toggleMenu() {
     nav.classList.toggle('show');
   }
 }
+
+/* ===============================
+   GLOBAL LIGHTBOX (NEW ✅)
+================================ */
+document.addEventListener('click', e => {
+  if (e.target.tagName === 'IMG' && e.target.closest('.gallery')) {
+    openLightbox(e.target.src);
+  }
+});
 
 /* ===============================
    LOAD TESTIMONIES (HOME PAGE)
