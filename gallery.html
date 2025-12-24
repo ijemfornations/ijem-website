@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>IJEM Gallery | Camps, VBS & Ministry Moments</title>
-  
-  <!-- Mobile Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>IJEM Gallery | Camps, VBS & Ministry Moments</title>
 
   <!-- SEO -->
   <meta name="description" content="View photos from IJEM camps, Vacation Bible School, prayer meetings, and ministry activities.">
@@ -24,25 +23,25 @@
 
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="camps.html">Camps</a>
-  <a href="vbs.html">VBS</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-</nav>
+<header>
+  <h1>IJEM</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="camps.html">Camps</a>
+    <a href="vbs.html">VBS</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-<!-- GALLERY SECTION -->
 <section class="gallery">
-  <h1>IJEM Media Gallery</h1>
+  <h2>IJEM Media Gallery</h2>
   <p>
     A glimpse of God’s work through Camps, Vacation Bible School,
     Prayer Meetings, and Ministry Activities.
   </p>
 
-  <!-- FILTER BUTTONS -->
   <div class="filters">
     <button onclick="filterGallery('all')">All</button>
     <button onclick="filterGallery('camp')">Camps</button>
@@ -50,29 +49,25 @@
     <button onclick="filterGallery('meeting')">Meetings</button>
   </div>
 
-  <!-- GALLERY GRID -->
   <div class="gallery-grid">
     <!-- Camps -->
-    <img src="images/gallery/camp1.jpg" class="gallery-item camp">
-    <img src="images/gallery/camp2.jpg" class="gallery-item camp">
+    <img src="images/gallery/camp1.jpg" alt="IJEM Youth Camp" class="gallery-item camp">
+    <img src="images/gallery/camp2.jpg" alt="IJEM Youth Camp Worship" class="gallery-item camp">
 
     <!-- VBS -->
-    <img src="images/gallery/vbs1.jpg" class="gallery-item vbs">
-    <img src="images/gallery/vbs2.jpg" class="gallery-item vbs">
+    <img src="images/gallery/vbs1.jpg" alt="IJEM Vacation Bible School" class="gallery-item vbs">
+    <img src="images/gallery/vbs2.jpg" alt="IJEM VBS Activities" class="gallery-item vbs">
 
     <!-- Meetings -->
-    <img src="images/gallery/meeting1.jpg" class="gallery-item meeting">
-    <img src="images/gallery/meeting2.jpg" class="gallery-item meeting">
+    <img src="images/gallery/meeting1.jpg" alt="IJEM Prayer Meeting" class="gallery-item meeting">
+    <img src="images/gallery/meeting2.jpg" alt="IJEM Fellowship Meeting" class="gallery-item meeting">
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  © IJEM – In Jesus Ever Ministries
+  <p>© IJEM – In Jesus Ever Ministries</p>
 </footer>
 
-<!-- JS -->
 <script src="js/main.js"></script>
-
 </body>
 </html>
