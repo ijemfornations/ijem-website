@@ -73,7 +73,7 @@ nav a {
 }
 
 /* ===============================
-   SECTIONS
+   SECTIONS (GLOBAL)
 ================================ */
 section {
   padding: 60px 30px;
@@ -91,7 +91,7 @@ section {
 }
 
 /* ===============================
-   HERO
+   HERO (HOME)
 ================================ */
 .hero {
   min-height: 80vh;
@@ -100,7 +100,7 @@ section {
   justify-content: center;
 }
 
-/* CTA */
+/* CTA Buttons */
 .cta-buttons {
   margin-top: 25px;
   display: flex;
@@ -150,7 +150,7 @@ section {
 }
 
 /* ===============================
-   VILLAGE-STYLE SECTIONS
+   HOME – VILLAGE STYLE SECTIONS
 ================================ */
 .mission {
   background: #ffffff;
@@ -193,11 +193,98 @@ section {
 }
 
 /* ===============================
-   NEXT EVENT
+   NEXT EVENT (HOME)
 ================================ */
 .next-event {
   background: #f5f6ff;
   padding: 80px 20px;
+}
+
+/* ===============================
+   CAMPS PAGE
+================================ */
+.camps-page section {
+  max-width: 1200px;
+  margin: auto;
+  text-align: left;
+}
+
+/* Camps Hero */
+.camps-hero {
+  background: linear-gradient(135deg, #2c2f6c, #1a237e);
+  color: white;
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.camps-hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.camps-hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  color: #eaeaf5;
+}
+
+/* Camps text rhythm */
+.camps-page h1 {
+  color: #2c2f6c;
+}
+
+.camps-page h2,
+.camps-page h3 {
+  color: #1a237e;
+  margin-top: 60px;
+}
+
+.camps-page p {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+}
+
+/* ===============================
+   SECTION DIVIDER
+================================ */
+.section-divider {
+  border: none;
+  height: 2px;
+  width: 80px;
+  background: #d4af37;
+  margin: 70px auto 40px;
+}
+
+/* ===============================
+   CAMPS FULL-BLEED IMAGE
+================================ */
+.camps-page .full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.camps-page .full-bleed img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border-radius: 0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Gallery caption */
+.gallery-caption {
+  text-align: center;
+  margin-top: 25px;
+  font-style: italic;
+  font-size: 15px;
+  color: #555;
 }
 
 /* ===============================
@@ -228,58 +315,4 @@ footer {
   padding: 10px 18px;
   border-radius: 25px;
   text-decoration: none;
-}
-/* ===============================
-   CAMPS PAGE OVERRIDES
-================================ */
-
-.camps-page section {
-  max-width: 1200px;
-  margin: auto;
-  text-align: left;
-}
-
-/* Camps gallery should be wide */
-.camps-page .gallery {
-  justify-content: center;
-}
-
-.camps-page .gallery img {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  border-radius: 12px;
-}
-/* ===============================
-   FULL-BLEED IMAGE FIX (CAMPS)
-================================ */
-
-.camps-page .full-bleed {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-}
-
-.camps-page .full-bleed img {
-  width: 100%;
-  max-width: none;
-  height: auto;
-  border-radius: 0;
-}
-/* Camps Hero */
-.camps-hero {
-  background: #f5f6ff;
-  padding: 100px 30px;
-  text-align: center;
-}
-
-.camps-hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
-
-.camps-hero p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: auto;
-  color: #444;
 }
