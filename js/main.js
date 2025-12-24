@@ -15,6 +15,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   faders.forEach(el => observer.observe(el));
 });
+/* ===============================
+   LANGUAGE TOGGLE
+================================ */
+function toggleLang() {
+  document.querySelectorAll('.en').forEach(e => {
+    e.style.display = e.style.display === 'none' ? 'block' : 'none';
+  });
+
+  document.querySelectorAll('.hi').forEach(e => {
+    e.style.display = e.style.display === 'none' ? 'block' : 'none';
+  });
+}
 
 /* ===============================
    LOAD TESTIMONIES (HOME PAGE)
