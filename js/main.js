@@ -1,4 +1,22 @@
 /* ===============================
+   FADE-IN ANIMATION
+================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  const faders = document.querySelectorAll('.fade');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // run once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  faders.forEach(el => observer.observe(el));
+});
+
+/* ===============================
    LOAD TESTIMONIES (HOME PAGE)
 ================================ */
 fetch('data/testimonies.json')
