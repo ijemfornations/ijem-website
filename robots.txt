@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://ijemfornations.github.io/ijem-website/sitemap.xml
