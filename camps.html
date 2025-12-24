@@ -36,6 +36,7 @@
     <a href="contact.html">Contact</a>
   </nav>
 </header>
+
 <section>
   <h2>IJEM Camps</h2>
 
@@ -94,6 +95,13 @@
     Stay updated with our upcoming camps, prayer meetings,
     and ministry programs.
   </p>
+
+  <!-- ✅ FILTER BUTTONS ADDED HERE -->
+  <div class="filters">
+    <button onclick="filterSchedule('all')">All</button>
+    <button onclick="filterSchedule('camp')">Camps</button>
+    <button onclick="filterSchedule('prayer')">Prayer</button>
+  </div>
 
   <div id="schedule-container"></div>
 </section>
