@@ -98,12 +98,16 @@ function filterGallery(category) {
 fetch('data/schedule.json')
   .then(res => res.json())
   .then(events => {
+    events.sort((a, b) => new Date(a.date) - new Date(b.date));
+
     const container = document.getElementById('schedule-container');
-    if (!container) return; // page-safe
+    if (!container) return;
 
     events.forEach(e => {
       const div = document.createElement('div');
       div.className = 'event';
+      div.dataset.type = e.type;
+
       div.innerHTML = `
         <h3>${e.title}</h3>
         <p><strong>Date:</strong> ${e.date}</p>
