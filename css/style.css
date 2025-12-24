@@ -1,21 +1,159 @@
+/* ===============================
+   TYPOGRAPHY (VILLAGE STYLE)
+================================ */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ===============================
+   HEADER & NAV
+================================ */
+header {
+  background: #2c2f6c;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Mobile Nav */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 100%;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 0;
+  }
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+section {
+  padding: 60px 30px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ===============================
+   HERO
+================================ */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* CTA */
+.cta-buttons {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta {
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta.primary {
+  background: #2c2f6c;
+  color: white;
+}
+
+.cta.secondary {
+  background: #d4af37;
+  color: #222;
+}
+
+.cta.outline {
+  border: 2px solid #2c2f6c;
+  color: #2c2f6c;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   FADE ANIMATION
+================================ */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* ===============================
    VILLAGE-STYLE SECTIONS
 ================================ */
-
-/* Mission Section */
 .mission {
   background: #ffffff;
   padding: 80px 20px;
 }
 
-/* Ministries Section */
 .ministries {
   background: #f9f9f9;
   padding: 80px 20px;
 }
 
-/* Card Grid */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -23,7 +161,6 @@
   margin-top: 40px;
 }
 
-/* Cards */
 .card {
   background: #ffffff;
   padding: 30px;
@@ -36,8 +173,51 @@
   transform: translateY(-6px);
 }
 
-/* Next Event Highlight */
+/* ===============================
+   TESTIMONIES
+================================ */
+.testimony {
+  max-width: 650px;
+  margin: 20px auto;
+  background: #f7f7f7;
+  padding: 20px;
+  border-left: 5px solid #1a237e;
+}
+
+/* ===============================
+   NEXT EVENT
+================================ */
 .next-event {
   background: #f5f6ff;
   padding: 80px 20px;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  background: #2c2f6c;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===============================
+   FLOATING BUTTONS
+================================ */
+.floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.floating a {
+  background: #2c2f6c;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 25px;
+  text-decoration: none;
 }
