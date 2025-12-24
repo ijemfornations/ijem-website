@@ -36,6 +36,13 @@ footer {
   text-align: center;
   padding: 15px;
 }
+/* Hero Section */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 /* Fade animation */
 .fade {
