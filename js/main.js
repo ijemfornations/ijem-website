@@ -47,6 +47,13 @@ document.addEventListener('click', e => {
     openLightbox(e.target.src);
   }
 });
+// Close lightbox on ESC key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    const box = document.getElementById('lightbox');
+    if (box) box.style.display = 'none';
+  }
+});
 
 /* ===============================
    LOAD TESTIMONIES (HOME PAGE)
