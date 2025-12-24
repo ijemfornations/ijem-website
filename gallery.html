@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Media Gallery – IJEM</title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="IJEM – In Jesus Ever Ministries. Raising a New Fruitful Generation through prayer, discipleship, camps, VBS, and daily spiritual activities.">
+
+  <!-- Mobile Responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <meta name="description" content="IJEM – In Jesus Ever Ministries. Raising a New Fruitful Generation through prayer, discipleship, camps, VBS, and ministry meetings.">
   <meta name="keywords" content="IJEM, Christian Ministry, Prayer Ministry, Bible Teaching, VBS, Youth Camps, Church India">
   <meta name="author" content="IJEM – In Jesus Ever Ministries">
-  
+
   <!-- Open Graph -->
   <meta property="og:title" content="IJEM – In Jesus Ever Ministries">
   <meta property="og:description" content="Rooted in Christ. Built by Prayer. Growing in God’s Word.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/cover.jpg">
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -26,41 +34,45 @@
   <a href="contact.html">Contact</a>
 </nav>
 
-<section>
-  <h2>IJEM Media Gallery</h2>
+<!-- GALLERY SECTION -->
+<section class="gallery">
+  <h1>IJEM Media Gallery</h1>
   <p>
-    A glimpse of God’s work through camps, VBS, prayer meetings,
-    and ministry activities.
+    A glimpse of God’s work through Camps, Vacation Bible School,
+    Prayer Meetings, and Ministry Activities.
   </p>
 
-  <h3>Youth Camps</h3>
-  <div class="gallery">
-    <img src="images/camps/camp1.jpg" onclick="openLightbox(this.src)">
-    <img src="images/camps/camp2.jpg" onclick="openLightbox(this.src)">
-    <img src="images/camps/camp3.jpg" onclick="openLightbox(this.src)">
-    <img src="images/camps/camp4.jpg" onclick="openLightbox(this.src)">
+  <!-- FILTER BUTTONS -->
+  <div class="filters">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('camp')">Camps</button>
+    <button onclick="filterGallery('vbs')">VBS</button>
+    <button onclick="filterGallery('meeting')">Meetings</button>
   </div>
 
+  <!-- GALLERY GRID -->
+  <div class="gallery-grid">
+    <!-- Camps -->
+    <img src="images/gallery/camp1.jpg" class="gallery-item camp">
+    <img src="images/gallery/camp2.jpg" class="gallery-item camp">
 
-  <h3>Vacation Bible School</h3>
-  <div class="gallery">
-    <img src="images/vbs/vbs1.jpg" onclick="openLightbox(this.src)">
-    <img src="images/vbs/vbs2.jpg" onclick="openLightbox(this.src)">
-    <img src="images/vbs/vbs3.jpg" onclick="openLightbox(this.src)">
+    <!-- VBS -->
+    <img src="images/gallery/vbs1.jpg" class="gallery-item vbs">
+    <img src="images/gallery/vbs2.jpg" class="gallery-item vbs">
+
+    <!-- Meetings -->
+    <img src="images/gallery/meeting1.jpg" class="gallery-item meeting">
+    <img src="images/gallery/meeting2.jpg" class="gallery-item meeting">
   </div>
-
-  <h3>Prayer & Worship</h3>
-  <div class="gallery">
-    <img src="images/prayer/prayer1.jpg" onclick="openLightbox(this.src)">
-    <img src="images/prayer/prayer2.jpg" onclick="openLightbox(this.src)">
-    <img src="images/prayer/prayer3.jpg" onclick="openLightbox(this.src)">
-  </div>
-
 </section>
 
+<!-- FOOTER -->
 <footer>
   © IJEM – In Jesus Ever Ministries
 </footer>
+
+<!-- JS -->
+<script src="js/main.js"></script>
 
 </body>
 </html>
