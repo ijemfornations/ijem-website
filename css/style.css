@@ -316,3 +316,60 @@ footer {
   border-radius: 25px;
   text-decoration: none;
 }
+/* ===============================
+   CAMPS PAGE FIXES
+================================ */
+
+.camps-hero {
+  background: linear-gradient(
+    rgba(28, 32, 96, 0.85),
+    rgba(28, 32, 96, 0.85)
+  );
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.camps-hero .hero-inner {
+  max-width: 800px;
+  margin: auto;
+}
+
+.camps-hero h1 {
+  font-size: 44px;
+  margin-bottom: 15px;
+}
+
+.camps-hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #eaeaff;
+}
+
+/* Centered content blocks */
+.camps-page .content {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+  text-align: left;
+}
+
+/* Full width image */
+.camps-page .full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.camps-page .full-bleed img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Caption */
+.gallery-caption {
+  text-align: center;
+  font-style: italic;
+  margin: 25px 0 80px;
+  color: #555;
+}
