@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   faders.forEach(el => observer.observe(el));
 });
+
 /* ===============================
    LANGUAGE TOGGLE
 ================================ */
@@ -26,6 +27,16 @@ function toggleLang() {
   document.querySelectorAll('.hi').forEach(e => {
     e.style.display = e.style.display === 'none' ? 'block' : 'none';
   });
+}
+
+/* ===============================
+   MOBILE MENU TOGGLE ✅ (NEW)
+================================ */
+function toggleMenu() {
+  const nav = document.getElementById('main-nav');
+  if (nav) {
+    nav.classList.toggle('show');
+  }
 }
 
 /* ===============================
@@ -50,7 +61,6 @@ fetch('data/testimonies.json')
   })
   .catch(err => console.error('Testimony load error:', err));
 
-
 /* ===============================
    GALLERY FILTER
 ================================ */
@@ -65,7 +75,6 @@ function filterGallery(category) {
     }
   });
 }
-
 
 /* ===============================
    LOAD SCHEDULE (CAMPS PAGE)
