@@ -77,6 +77,14 @@ nav a {
 ================================ */
 section {
   padding: 60px 30px;
+}
+
+/* Centered sections (Home page only) */
+.hero,
+.mission,
+.ministries,
+.testimonies,
+.next-event {
   max-width: 1000px;
   margin: auto;
   text-align: center;
