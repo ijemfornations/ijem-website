@@ -250,4 +250,18 @@ footer {
   height: auto;
   border-radius: 12px;
 }
+/* ===============================
+   FULL-BLEED IMAGE FIX (CAMPS)
+================================ */
 
+.camps-page .full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.camps-page .full-bleed img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border-radius: 0;
+}
