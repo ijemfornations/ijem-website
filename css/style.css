@@ -1,52 +1,57 @@
 /* ===============================
-   TYPOGRAPHY (VILLAGE STYLE)
+   GLOBAL RESET & TYPOGRAPHY
 ================================ */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #f9f9f9;
+  background: #ffffff;
   color: #222;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
+  color: #1c2060;
 }
 
 /* ===============================
    HEADER & NAV
 ================================ */
 header {
-  background: #2c2f6c;
+  background: #1c2060;
   color: white;
-  padding: 15px 30px;
+  padding: 18px 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  font-weight: bold;
   font-size: 20px;
+  font-weight: 700;
 }
 
 nav {
   display: flex;
-  gap: 20px;
+  gap: 24px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-/* Mobile Nav */
+/* Mobile nav */
 .menu-toggle {
   display: none;
+  font-size: 26px;
   background: none;
   border: none;
-  font-size: 26px;
   color: white;
   cursor: pointer;
 }
@@ -55,246 +60,145 @@ nav a {
   .menu-toggle {
     display: block;
   }
-
   nav {
     display: none;
     flex-direction: column;
     margin-top: 15px;
-    width: 100%;
   }
-
   nav.show {
     display: flex;
   }
-
-  nav a {
-    padding: 10px 0;
-  }
 }
 
 /* ===============================
-   SECTIONS (GLOBAL)
+   SECTION SYSTEM (IMPORTANT)
 ================================ */
-section {
-  padding: 60px 30px;
-}
 
-/* Centered sections (Home page only) */
+/* Full-width hero */
 .hero,
-.mission,
-.ministries,
-.testimonies,
-.next-event {
-  max-width: 1000px;
-  margin: auto;
+.camps-hero {
+  width: 100%;
+  background: linear-gradient(
+    rgba(28,32,96,0.85),
+    rgba(28,32,96,0.85)
+  );
+  color: white;
+  padding: 120px 20px;
   text-align: center;
 }
 
-/* ===============================
-   HERO (HOME)
-================================ */
-.hero {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.hero h1,
+.camps-hero h1 {
+  font-size: 46px;
+  margin-bottom: 15px;
+  color: white;
 }
 
-/* CTA Buttons */
+.hero p,
+.camps-hero p {
+  font-size: 18px;
+  max-width: 720px;
+  margin: auto;
+  color: #e6e6ff;
+}
+
+/* Centered content */
+.section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 90px 20px;
+}
+
+/* Soft background blocks */
+.section.light {
+  background: #f7f8fc;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
 .cta-buttons {
-  margin-top: 25px;
+  margin-top: 30px;
   display: flex;
-  gap: 15px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .cta {
-  padding: 12px 26px;
+  padding: 14px 28px;
   border-radius: 30px;
   text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
+  font-weight: 600;
 }
 
 .cta.primary {
-  background: #2c2f6c;
-  color: white;
+  background: #ffffff;
+  color: #1c2060;
 }
 
 .cta.secondary {
   background: #d4af37;
-  color: #222;
-}
-
-.cta.outline {
-  border: 2px solid #2c2f6c;
-  color: #2c2f6c;
-}
-
-.cta:hover {
-  transform: translateY(-2px);
+  color: #1c2060;
 }
 
 /* ===============================
-   FADE ANIMATION
+   CARDS (About / Ministries)
 ================================ */
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ===============================
-   HOME – VILLAGE STYLE SECTIONS
-================================ */
-.mission {
-  background: #ffffff;
-  padding: 80px 20px;
-}
-
-.ministries {
-  background: #f9f9f9;
-  padding: 80px 20px;
-}
-
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  gap: 32px;
   margin-top: 40px;
 }
 
 .card {
-  background: #ffffff;
-  padding: 30px;
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* ===============================
+   GALLERY (FIXED)
+================================ */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
   border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
+  cursor: pointer;
 }
 
 /* ===============================
-   TESTIMONIES
+   FULL-WIDTH IMAGE (CAMPS)
 ================================ */
-.testimony {
-  max-width: 650px;
-  margin: 20px auto;
-  background: #f7f7f7;
-  padding: 20px;
-  border-left: 5px solid #1a237e;
-}
-
-/* ===============================
-   NEXT EVENT (HOME)
-================================ */
-.next-event {
-  background: #f5f6ff;
-  padding: 80px 20px;
-}
-
-/* ===============================
-   CAMPS PAGE
-================================ */
-.camps-page section {
-  max-width: 1200px;
-  margin: auto;
-  text-align: left;
-}
-
-/* Camps Hero */
-.camps-hero {
-  background: linear-gradient(135deg, #2c2f6c, #1a237e);
-  color: white;
-  padding: 100px 30px;
-  text-align: center;
-}
-
-.camps-hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-  color: #fff;
-}
-
-.camps-hero p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: auto;
-  color: #eaeaf5;
-}
-
-/* Camps text rhythm */
-.camps-page h1 {
-  color: #2c2f6c;
-}
-
-.camps-page h2,
-.camps-page h3 {
-  color: #1a237e;
-  margin-top: 60px;
-}
-
-.camps-page p {
-  margin-top: 15px;
-  margin-bottom: 25px;
-  line-height: 1.8;
-  color: #333;
-  max-width: 800px;
-}
-
-/* ===============================
-   SECTION DIVIDER
-================================ */
-.section-divider {
-  border: none;
-  height: 2px;
-  width: 80px;
-  background: #d4af37;
-  margin: 70px auto 40px;
-}
-
-/* ===============================
-   CAMPS FULL-BLEED IMAGE
-================================ */
-.camps-page .full-bleed {
+.full-bleed {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  margin-top: 40px;
-  margin-bottom: 30px;
 }
 
-.camps-page .full-bleed img {
+.full-bleed img {
   width: 100%;
-  max-width: none;
   height: auto;
-  border-radius: 0;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-}
-
-/* Gallery caption */
-.gallery-caption {
-  text-align: center;
-  margin-top: 25px;
-  font-style: italic;
-  font-size: 15px;
-  color: #555;
+  display: block;
 }
 
 /* ===============================
    FOOTER
 ================================ */
 footer {
-  background: #2c2f6c;
+  background: #1c2060;
   color: white;
   text-align: center;
-  padding: 15px;
+  padding: 25px;
 }
 
 /* ===============================
@@ -306,70 +210,13 @@ footer {
   right: 20px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .floating a {
-  background: #2c2f6c;
+  background: #1c2060;
   color: white;
   padding: 10px 18px;
   border-radius: 25px;
   text-decoration: none;
-}
-/* ===============================
-   CAMPS PAGE FIXES
-================================ */
-
-.camps-hero {
-  background: linear-gradient(
-    rgba(28, 32, 96, 0.85),
-    rgba(28, 32, 96, 0.85)
-  );
-  color: white;
-  padding: 120px 20px;
-  text-align: center;
-}
-
-.camps-hero .hero-inner {
-  max-width: 800px;
-  margin: auto;
-}
-
-.camps-hero h1 {
-  font-size: 44px;
-  margin-bottom: 15px;
-}
-
-.camps-hero p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #eaeaff;
-}
-
-/* Centered content blocks */
-.camps-page .content {
-  max-width: 900px;
-  margin: auto;
-  padding: 80px 20px;
-  text-align: left;
-}
-
-/* Full width image */
-.camps-page .full-bleed {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-}
-
-.camps-page .full-bleed img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Caption */
-.gallery-caption {
-  text-align: center;
-  font-style: italic;
-  margin: 25px 0 80px;
-  color: #555;
 }
